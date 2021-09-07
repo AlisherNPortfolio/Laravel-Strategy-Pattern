@@ -14,7 +14,7 @@ Cache::put('name', 'Salom', 600);
 
 Yuqoridagi kodda, fasaddan foydalanib klas service container-dan olib ishlatilgan. Bu yerda fasad haqida to'liq ma'lumot berilmaydi, lekin bu yerda bilishimiz kerak bo'lgan narsa - Cache fasadi interfeysni klasga bog'lab, uni ishlatadi.
 
-Laravel documentation yoki laravel kodlaridan ko'rgan bo'lsangiz, Laravel keshlashda turli xildagi drayverlardan foydalanadi (M: Redis, DynamoDB, Memcached va Database). Misol uchun, agar biz `.env` faylida cache drayverga `CACHE_DRIVER=redis` deb berilsa, keshlangan ma'lumotlar Redis keshda saqlanishni boshlaydi. Yoki, agar `CACHE_DRIVER=database` qilinsa ma'lumotlar bazasida saqlanadi.
+Laravel documentation yoki laravel kodlaridan ko'rgan bo'lsangiz, Laravel keshlashda turli xildagi drayverlardan foydalanadi (M: Redis, DynamoDB, Memcached va Database). Misol uchun, agar biz `.env` faylida cache drayverga `CACHE_DRIVER=redis` deb bersak, keshlangan ma'lumotlar Redis keshda saqlanishni boshlaydi. Yoki, agar `CACHE_DRIVER=database` qilinsa ma'lumotlar bazasida saqlanadi.
 
 Har bitta kesh drayverida o'zining alohida klasi mavjud. .env faylida kesh drayver turini o'zgartirganimizda, Laravel kerak kesh klasni ishga tushiradi. Aynan shu joyda strategy pattern ishlatiladi.
 
