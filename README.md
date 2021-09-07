@@ -16,9 +16,9 @@ Yuqoridagi kodda, fasaddan foydalanib klas service container-dan olib ishlatilga
 
 Laravel documentation yoki laravel kodlaridan ko'rgan bo'lsangiz, Laravel keshlashda turli xildagi drayverlardan foydalanadi (M: Redis, DynamoDB, Memcached va Database). Misol uchun, agar biz `.env` faylida cache drayverga `CACHE_DRIVER=redis` deb bersak, keshlangan ma'lumotlar Redis keshda saqlanishni boshlaydi. Yoki, agar `CACHE_DRIVER=database` qilinsa ma'lumotlar bazasida saqlanadi.
 
-Har bitta kesh drayverida o'zining alohida klasi mavjud. .env faylida kesh drayver turini o'zgartirganimizda, Laravel kerak kesh klasni ishga tushiradi. Aynan shu joyda strategy pattern ishlatiladi.
+Har bitta kesh drayverida o'zining alohida klasi mavjud. .env faylida kesh drayver turini o'zgartirganimizda, Laravel kerakli kesh klasni ishga tushiradi. Aynan shu joyda strategy pattern ishlatiladi.
 
-Masalan, Laravelad Cache fasadini ishlatgan paytimiz, laravel `Illuminate\Contracts\Cache\Factory` interfeysini service container-dan oladi. U, avval, config-dan qaysi turdagi kesh drayver o'rnatilganini aniqlaydi. So'ngra shunga qarab kerakli klasni chaqiradi. Misol uchun, kesh drayverimiz `CACHE_DRIVER=redis` deb berilgan bo'lsa, `Factory` interfeysi chaqiriladi, va u o'z navbatida Redis keshni ishga tushiradi.
+Masalan, Laravel-da Cache fasadini ishlatgan paytimiz, laravel `Illuminate\Contracts\Cache\Factory` interfeysini service container-dan oladi. U, avval, config-dan qaysi turdagi kesh drayver o'rnatilganini aniqlaydi. So'ngra shunga qarab kerakli klasni chaqiradi. Misol uchun, kesh drayverimiz `CACHE_DRIVER=redis` deb berilgan bo'lsa, `Factory` interfeysi chaqiriladi, va u o'z navbatida Redis keshni ishga tushiradi.
 
 Ko'rib turganingizdek, strategy pattern kodni kengaytirishni osonlashtiradi. Masalan, agar biz o'zimizning kesh drayverimizni qo'shmoqchi bo'lsak, shunchaki uni yozib, keyin laravel-ga berib qo'ysak yetarli bo'ladi.
 
